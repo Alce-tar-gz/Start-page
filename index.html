@@ -1,56 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<script src="https://unpkg.com/htmx.org@2.0.1" integrity="sha384-QWGpdj554B4ETpJJC9z+ZHJcA/i59TyjxEPXiiUgN2WmTyV5OEZWCD6gQhgkdpB/" crossorigin="anonymous"></script>
-		<style>
-			body {
-				background-color: #2e3440;
-				color: #d8dee9;
-				font-family: "Fira Code", monospace;
-			}
-      .container {
-        margin: auto;
-        width: 640px; 
-        padding: 100px;
-        text-align: center;
-        a:link {
-          color: #d8dee9;
-        }
-        a:visited {
-          color: #d8dee9;
-        }
-        a:hover {
-          color: #2e3440;
-          background-color: #d8dee9;
-        }
+<head>
+    <script src="https://unpkg.com/htmx.org@2.0.1" integrity="sha384-QWGpdj554B4ETpJJC9z+ZHJcA/i59TyjxEPXiiUgN2WmTyV5OEZWCD6gQhgkdpB/" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <style>
+        body {
+	background-color: #2e3440;
+	color: #d8dee9;
+	font-family: "Fira Code", monospace;
+	}
+.container {
+  margin: auto;
+  width: 640px; 
+  padding: 100px;
+  text-align: center;
+  a:link {
+    color: #d8dee9;
+  }
+  a:visited {
+    color: #d8dee9;
+  }
+  a:hover {
+    color: #2e3440;
+    background-color: #d8dee9;
+  }
+}
+.searchbar {
+  background-color: #3b4252;
+  width: 90%;
+  height: 50px;
+  color: #d8dee9;
+  border: 1px;
+  border-radius: 1px;
+  font-family: "Fira Code", monospace;
+  font-size: 30px;
+  margin: 30px;
       }
-      .searchbar {
-        background-color: #3b4252;
-        width: 90%;
-        height: 50px;
-        color: #d8dee9;
-        border: 1px;
-        border-radius: 1px;
-        font-family: "Fira Code", monospace;
-        font-size: 30px;
-        margin: 30px;
-      }
-		</style>
-		<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
-	</head>
-	<body>
-		<div class="container">
-				<h1>Welcome to the Internet!</h1>
+        .htmx-indicator{opacity:0}
+        .htmx-request .htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}
+        .htmx-request.htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Internet!</h1>
         <div class="search">
-          <form action="#">
-              <input class="searchbar" type="text" placeholder="Search"
-                     name="search">
+            <form action="https://duckduckgo.com/" method="get" target="_blank">
+                <input class="searchbar" type="text" placeholder="Search DuckDuckGo" name="q">
             </form>
         </div>
         <a href="https://youtu.be">YouTube</a>
         <a href="https://github.com">GitHub</a>
     </div>
-			<br>
+</body>
+</html>
 
-		</div>
-	</body>
